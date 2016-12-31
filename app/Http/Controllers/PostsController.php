@@ -11,6 +11,6 @@ class PostsController extends Controller
 
   public function index(\RegisterUsers $registration)
   {
-    var_dump($registration);
+    dd($registration);
   }
 }

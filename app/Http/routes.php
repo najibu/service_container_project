@@ -1,4 +1,9 @@
 <?php
+//Displays querys to the database
+// DB::listen(function($query){
+//   Log::info
+//   var_dump($query->sql, $query->bindings);
+// });
 
 class Mailer {
   
@@ -36,9 +41,9 @@ App::bind('RegisterUsers', function(){
 */
 
 Route::get('/', function (RegisterUsers $registration) {
-    return var_dump($registration);
+    return 'Welcome page';
 });
 
-Route::group(['middleware' => ['web']], function(){
-  Route::get('posts', 'PostsController@index');
-});
+
+Route::get('posts', 'PostsController@index');
+
